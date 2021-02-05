@@ -34,7 +34,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <start.class>io.kyberorg.actions.hi.App</start.class>
+                <start.class>io.kyberorg.actions.helloworld.Application</start.class>
                 <graalvm.version>21.0.0</graalvm.version>
                 <image.name>hello-world</image.name>
             </properties>
