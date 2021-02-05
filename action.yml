@@ -1,0 +1,19 @@
+# action.yml
+name: 'Hello World'
+author: 'Aleksandr Muravja'
+branding:
+  icon: 'code'
+  color: 'green'
+description: 'Greets user based on name passed in param'
+inputs:
+  name:
+    description: 'string with name to greet'
+    required: false
+outputs:
+  result:
+    description: '0 - exit code that indicates success'
+runs:
+  using: 'docker'
+  image: 'kyberorg/hello-world-action:trunk'
+  args:
+    - ${{ inputs.name }}
