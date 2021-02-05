@@ -1,5 +1,5 @@
 # Build the app
-FROM oracle/graalvm-ce:20.3.0-java11 as builder
+FROM ghcr.io/oracle/graalvm-ce:21.0.0 as builder
 
 VOLUME /tmp
 
