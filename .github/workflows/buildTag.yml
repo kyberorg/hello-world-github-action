@@ -8,7 +8,7 @@ on:
 jobs:
   buildTag:
     name: Build Tag
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
@@ -23,11 +23,6 @@ jobs:
         with:
           username: ${{ secrets.HUB_USERNAME }}
           password: ${{ secrets.HUB_PASSWORD }}
-
-      - name: Prepare Docker
-        run: |
-          export DOCKER_BUILDKIT=0
-          export COMPOSE_DOCKER_CLI_BUILD=0
 
       - name: Build and push
         id: docker_build
