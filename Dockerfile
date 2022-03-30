@@ -1,5 +1,5 @@
 # Create a minimal docker container and copy the app into it
-FROM alpine:latest
+FROM alpine:3.15.3
 WORKDIR /app
 COPY target/hello-world hello-world
 COPY entrypoint.sh .
